@@ -1,27 +1,25 @@
 public class Main {
     public static void main(String[] args) {
 
-        Character character = new Character(100, 50);
+        // Create character
+        Character character = new Character("Hero");
 
-        // Swing sword to reduce stamina
+        // Swing sword to reduce stamina and trigger pass out
         character.swingSword();
         character.swingSword();
         character.swingSword();
         character.swingSword();
         character.swingSword();
 
-        // Take damage to reduce health
+        // Take damage to reduce health and trigger death
         character.takeDamage(30);
         character.takeDamage(50);
         character.takeDamage(20);
 
-        // Rest to restore stats
+        // Rest to restore health and stamina
         character.rest();
 
-        // Final state (use getters)
-        System.out.println(
-                "Character's health: " + character.getHealth() +
-                        ", stamina: " + character.getStamina() + "."
-        );
+        // Show final state
+        character.showDetails();
     }
 }
